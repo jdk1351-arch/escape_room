@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교실 방탈출 게임</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- 클릭 가능한 오브젝트 (핫스팟) -->
+        <div id="speaker" class="clickable-object" title="스피커를 조사한다"></div>
+        <div id="clock" class="clickable-object" title="시계를 조사한다"></div>
+        <div id="computer" class="clickable-object" title="컴퓨터를 조사한다"></div>
+        <div id="books" class="clickable-object" title="책을 조사한다"></div>
+        <div id="door" class="clickable-object" title="문을 열어본다"></div>
+
+        <!-- 힌트 표시 영역 -->
+        <div id="hint-display">
+            <h3>획득한 힌트</h3>
+            <p id="collected-hints">[ ?, ?, ?, ? ]</p>
+        </div>
+    </div>
+
+    <!-- 게임용 모달 -->
+    <div id="game-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-game-modal">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    
+    <!-- 문 비밀번호 입력용 모달 -->
+    <div id="door-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-door-modal">&times;</span>
+            <h2>비밀번호 입력</h2>
+            <p>네 자리 비밀번호를 입력하세요.</p>
+            <input type="text" id="password-input" maxlength="4" placeholder="----">
+            <button id="submit-password">탈출 시도</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
